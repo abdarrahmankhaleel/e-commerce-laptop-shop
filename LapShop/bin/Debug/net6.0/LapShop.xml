@@ -1,0 +1,163 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LapShop</name>
+    </assembly>
+    <members>
+        <member name="M:LapShop.apis.ItemsController.Get">
+            <summary>
+            get all items 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LapShop.apis.ItemsController.Get(System.Int32)">
+            <summary>
+            get item by id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="P:LapShop.Models.APIResponse.Data">
+            <summary>
+            data coming from api
+            </summary>
+        </member>
+        <member name="P:LapShop.Models.APIResponse.Errors">
+            <summary>
+            list of errors of fail api
+            </summary>
+        </member>
+        <member name="P:LapShop.Models.APIResponse.StatusCode">
+            <summary>
+            200 success 
+            </summary>
+        </member>
+        <member name="T:LapShop.Resources.ResAdmin">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:LapShop.Resources.ResAdmin.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:LapShop.Resources.ResAdmin.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:LapShop.Resources.ResAdmin.lblCategoryName">
+            <summary>
+              Looks up a localized string similar to Category Name.
+            </summary>
+        </member>
+        <member name="P:LapShop.Resources.ResAdmin.lblgpu">
+            <summary>
+              Looks up a localized string similar to gpu.
+            </summary>
+        </member>
+        <member name="P:LapShop.Resources.ResAdmin.lblImage">
+            <summary>
+              Looks up a localized string similar to Image.
+            </summary>
+        </member>
+        <member name="P:LapShop.Resources.ResAdmin.lblItemNamme">
+            <summary>
+              Looks up a localized string similar to ItemName.
+            </summary>
+        </member>
+        <member name="P:LapShop.Resources.ResAdmin.lblItemType">
+            <summary>
+              Looks up a localized string similar to ItemType.
+            </summary>
+        </member>
+        <member name="P:LapShop.Resources.ResAdmin.lblOs">
+            <summary>
+              Looks up a localized string similar to Opeating System.
+            </summary>
+        </member>
+        <member name="P:LapShop.Resources.ResAdmin.lblPrice">
+            <summary>
+              Looks up a localized string similar to Price.
+            </summary>
+        </member>
+        <member name="P:LapShop.Resources.ResAdmin.lblProcesor">
+            <summary>
+              Looks up a localized string similar to Procesor.
+            </summary>
+        </member>
+        <member name="P:LapShop.Resources.ResAdmin.lblPurchesPrice">
+            <summary>
+              Looks up a localized string similar to PurchesPrice.
+            </summary>
+        </member>
+        <member name="P:LapShop.Resources.ResAdmin.lblRamSize">
+            <summary>
+              Looks up a localized string similar to RamSize.
+            </summary>
+        </member>
+        <member name="P:LapShop.Resources.ResAdmin.lblSalesPrice">
+            <summary>
+              Looks up a localized string similar to SalesPrice.
+            </summary>
+        </member>
+        <member name="P:LapShop.Resources.ResAdmin.lblScreenReslution">
+            <summary>
+              Looks up a localized string similar to ScreenReslution.
+            </summary>
+        </member>
+        <member name="P:LapShop.Resources.ResAdmin.lblScreenSize">
+            <summary>
+              Looks up a localized string similar to ScreenSize.
+            </summary>
+        </member>
+        <member name="P:LapShop.Resources.ResAdmin.lblShowHomePage">
+            <summary>
+              Looks up a localized string similar to Show in Home Page.
+            </summary>
+        </member>
+        <member name="P:LapShop.Resources.ResAdmin.lblwait">
+            <summary>
+              Looks up a localized string similar to wait.
+            </summary>
+        </member>
+        <member name="T:LapShop.Resources.ResGeneral">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:LapShop.Resources.ResGeneral.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:LapShop.Resources.ResGeneral.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:LapShop.Resources.ResGeneral.lblActions">
+            <summary>
+              Looks up a localized string similar to Actions.
+            </summary>
+        </member>
+        <member name="P:LapShop.Resources.ResGeneral.lblEdit">
+            <summary>
+              Looks up a localized string similar to Edit.
+            </summary>
+        </member>
+        <member name="P:LapShop.Resources.ResGeneral.lblNew">
+            <summary>
+              Looks up a localized string similar to New.
+            </summary>
+        </member>
+        <member name="P:LapShop.Resources.ResGeneral.lblSave">
+            <summary>
+              Looks up a localized string similar to Save.
+            </summary>
+        </member>
+    </members>
+</doc>

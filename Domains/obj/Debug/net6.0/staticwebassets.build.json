@@ -1,0 +1,46 @@
+{
+  "Version": 1,
+  "Hash": "Oa0tkD0ChswX58d67IbMhO17bYg5Yag4kAwPlOBg7dA=",
+  "Source": "Dumain",
+  "BasePath": "_content/Dumain",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [
+    {
+      "Identity": "D:\\LapShop\\LapShop\\Dumain\\obj\\Debug\\net6.0\\scopedcss\\bundle\\Dumain.styles.css",
+      "SourceId": "Dumain",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\LapShop\\LapShop\\Dumain\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
+      "BasePath": "_content/Dumain",
+      "RelativePath": "Dumain.styles.css",
+      "AssetKind": "All",
+      "AssetMode": "CurrentProject",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ApplicationBundle",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "D:\\LapShop\\LapShop\\Dumain\\obj\\Debug\\net6.0\\scopedcss\\bundle\\Dumain.styles.css"
+    },
+    {
+      "Identity": "D:\\LapShop\\LapShop\\Dumain\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Dumain.bundle.scp.css",
+      "SourceId": "Dumain",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\LapShop\\LapShop\\Dumain\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
+      "BasePath": "_content/Dumain",
+      "RelativePath": "Dumain.bundle.scp.css",
+      "AssetKind": "All",
+      "AssetMode": "Reference",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ProjectBundle",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "D:\\LapShop\\LapShop\\Dumain\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Dumain.bundle.scp.css"
+    }
+  ]
+}

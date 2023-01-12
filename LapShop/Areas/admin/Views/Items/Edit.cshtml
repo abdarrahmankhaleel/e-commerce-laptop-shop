@@ -1,0 +1,140 @@
+﻿@model TbItem
+
+
+<div class="content-wrapper">
+    <div class="page-header">
+        <h3 class="page-title"> Form elements </h3>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Forms</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Form elements</li>
+            </ol>
+        </nav>
+    </div>
+    <form class="forms-sample" method="post" enctype="multipart/form-data"
+          asp-controller="Items" asp-action="Save" role="form">
+        <div class="row">
+        
+            <div class="col-md-6 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Default form</h4>
+                        <p class="card-description"> Basic form layout </p>
+                   
+                            <input asp-for="ItemId" type="hidden" />
+                            <input asp-for="CreatedBy" type="hidden" />
+                            <input asp-for="CreatedDate" type="hidden" />
+                            <input asp-for="CreatedDate" type="hidden" />
+                            <input asp-for="ImageName" type="hidden" />
+                            <div class="form-group">
+                                <label for="exampleInputUsername1">@ResAdmin.lblItemNamme</label>
+                                <input asp-for="ItemName" type="text" class="form-control" placeholder="Item Name">
+                                <span asp-validation-for="ItemId"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputUsername1">@ResAdmin.lblCategoryName</label>
+                                <select asp-for="CategoryId" asp-items="@(new SelectList(ViewBag.lstCateg,"CategoryId","CategoryName"))"></select>
+                                <span asp-validation-for="CategoryId"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputUsername1">@ResAdmin.lblItemType</label>
+                                <select asp-for="ItemTypeId" asp-items="@(new SelectList(ViewBag.lstItemType,"ItemTypeId","ItemTypeName"))"></select>
+                                <span asp-validation-for="ItemTypeId"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputUsername1">@ResAdmin.lblOs</label>
+                                <select asp-for="OsId" asp-items="@(new SelectList(ViewBag.lstOs,"OsId","OsName"))"></select>
+                                <span asp-validation-for="OsId"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="exampleInputUsername1">@ResAdmin.lblSalesPrice</label>
+                                <input asp-for="SalesPrice" type="text" class="form-control" placeholder="SalesPrice">
+                                <span asp-validation-for="SalesPrice"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputUsername1">@ResAdmin.lblPurchesPrice</label>
+                                <input asp-for="PurchasePrice" type="text" class="form-control" placeholder="SalesPrice">
+                                <span asp-validation-for="PurchasePrice"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputUsername1">@ResAdmin.lblwait</label>
+                                <input asp-for="Weight" type="text" class="form-control" placeholder="wait">
+                                <span asp-validation-for="Weight"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="exampleInputUsername1">
+                                    @ResAdmin.lblImage
+                                </label>
+                                <input asp-for="ImageName" type="file" name="Files"
+                                       class="form-control" placeholder="@ResAdmin.lblImage"
+                                       onchange="Upload.UploadDefaultImg(event)" accept=".jpg, .jpeg, .png, ,.gif">
+
+                            </div>
+
+                            <button type="submit" formmethod="post" class="btn btn-gradient-primary me-2">@ResGeneral.lblSave</button>
+                            <button class="btn btn-light">@ResGeneral.lblNew</button>
+                    
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="exampleInputUsername1">@ResAdmin.lblgpu</label>
+                            <input asp-for="Gpu" type="text" class="form-control" placeholder="gpu">
+                            <span asp-validation-for="Gpu"></span>
+                        </div>
+                        <div class="form-group">
+                                <label for="exampleInputUsername1">@ResAdmin.lblProcesor</label>
+                            <input asp-for="Processor" type="text" class="form-control" placeholder="Processor">
+                            <span asp-validation-for="Processor"></span>
+                        </div>
+                        <div class="form-group">
+                                <label for="exampleInputUsername1">@ResAdmin.lblScreenReslution</label>
+                            <input asp-for="ScreenReslution" type="text" class="form-control" placeholder="ScreenReslution">
+                            <span asp-validation-for="ScreenReslution"></span>
+                        </div>
+                        <div class="form-group">
+                                <label for="exampleInputUsername1">@ResAdmin.lblRamSize</label>
+                            <input asp-for="RamSize" type="text" class="form-control" placeholder="RamSize">
+                            <span asp-validation-for="RamSize"></span>
+                        </div>
+                        <div class="form-group">
+                                <label for="exampleInputUsername1">@ResAdmin.lblScreenSize</label>
+                            <input asp-for="ScreenSize" type="text" class="form-control" placeholder="ScreenSize">
+                            <span asp-validation-for="ScreenSize"></span>
+                        </div>
+                        <span id="tbImgName"></span>
+                        <div id="tbImgSrc">
+                            <img src="/Uploads/Categories/@Model.ImageName" style="width:95%; height300px;" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+    </form>
+</div>
+
+@section Scripts
+    {
+    <script>
+        var Upload = {
+            UploadDefaultImg: function (e) {
+                const file = e.target.files[0];
+                const reader = new FileReader();
+                reader.onloadend = () => {
+                    CourseMediaImgName = file.name;
+                    CourseMediaImgBase64 = reader.result.slice(reader.result.indexOf('base64,') + 7);
+                    $("#tbImgName").html(file.name)
+                    $("#tbImgSrc").html(`<img class="thumbnail" src = "${reader.result}"  style = "width: 200px;height: 300px;border-radius: 5px;border: 1px solid #d9d9d9;padding: 1px;" />`)
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+    </script>
+}
